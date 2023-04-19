@@ -15,7 +15,9 @@ fn main() {
     env_logger::init();
 
     let config = Config::new(CONFIG_FILE);
-    let client = ChatGPT::new(&config);
+
+    #[allow(unused_mut)]
+    let mut client = ChatGPT::new(&config);
 
     let mut buf = String::new();
     loop {
